@@ -50,7 +50,7 @@ public class DomoController {
         domoRequest.setSessionLength(1440);
         domoRequest.setAuthorizations(Arrays.asList(authorization));
 
-        Mono<String> resource = client.post()
+        return client.post()
             .uri(tokenUri)
             .header(HttpHeaders.AUTHORIZATION, "Basic " + Base64Utils.encodeToString((clientId + ":" + clientSecret).getBytes()))
             .body(BodyInserters.fromFormData(OAuth2ParameterNames.GRANT_TYPE, GrantType.CLIENT_CREDENTIALS.getValue()))
@@ -68,7 +68,6 @@ public class DomoController {
                     .retrieve()
                     .bodyToMono(String.class);
             });
-        return resource.map(res -> "Retrieved the resource using a manual approach: " + res);
     }
 
 }

@@ -1,0 +1,10 @@
+domo:
+  authorization-uri: https://api.domo.com/v1/cards/embed/auth
+  token-uri: https://api.domo.com/oauth/token
+  client-id: <YOUR-CLIENT-ID>
+  client-secret: <YOUR-CLIENT-SECRET>
+  authorization-grant-type: client_credentials
+  scope: data, audit, user, dashboard
+
+logging.level.reactor.netty.http.client.HttpClient: DEBUG
+

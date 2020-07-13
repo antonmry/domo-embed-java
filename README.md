@@ -18,7 +18,7 @@ curl localhost:8080/domo/ej73l
 ```
 
 You can use the `authorization` field to show the widget. For example, using
-this HTML template replacing <EMBED-ID> and >AUTHORIZATION-TOKEN>:
+this HTML template replacing `<EMBED-ID>` and `<AUTHORIZATION-TOKEN>`:
 
 ```html
 <html>
